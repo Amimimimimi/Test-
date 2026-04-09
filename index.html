@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  />
+  <title>Progress</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="screen">
+    <section class="progress-card" aria-label="Progress block">
+      <h1 class="title">Progress</h1>
+
+      <div class="guides" aria-hidden="true">
+        <span class="guide frame-top"></span>
+        <span class="guide frame-right"></span>
+        <span class="guide frame-bottom"></span>
+        <span class="guide frame-left"></span>
+        <span class="guide guide-vertical"></span>
+        <span class="guide guide-horizontal"></span>
+      </div>
+
+      <div class="content">
+        <div class="visual-area">
+          <div class="progress-box" id="progressBox">
+            <svg
+              class="progress-svg"
+              viewBox="0 0 180 180"
+              width="180"
+              height="180"
+              role="img"
+              aria-label="Progress indicator"
+            >
+              <circle
+                class="progress-track"
+                cx="90"
+                cy="90"
+                r="64"
+              ></circle>
+
+              <circle
+                class="progress-value"
+                id="progressCircle"
+                cx="90"
+                cy="90"
+                r="64"
+              ></circle>
+            </svg>
+          </div>
+        </div>
+
+        <div class="controls-area">
+          <div class="controls">
+            <label class="control-row" for="valueInput">
+              <span class="control-label">Value</span>
+              <input
+                id="valueInput"
+                class="value-input"
+                type="number"
+                min="0"
+                max="100"
+                step="1"
+                value="60"
+                inputmode="numeric"
+              />
+            </label>
+
+            <label class="control-row" for="animateInput">
+              <span class="control-label">Animate</span>
+              <span class="ios-switch">
+                <input id="animateInput" type="checkbox" />
+                <span class="ios-switch-slider"></span>
+              </span>
+            </label>
+
+            <label class="control-row" for="hideInput">
+              <span class="control-label">Hide</span>
+              <span class="ios-switch">
+                <input id="hideInput" type="checkbox" />
+                <span class="ios-switch-slider"></span>
+              </span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
